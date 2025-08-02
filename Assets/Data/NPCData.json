@@ -1,0 +1,142 @@
+{
+  "npcs": [
+    {
+      "id": "street_smoker",
+      "displayName": "路上喫煙者",
+      "violationType": "smoking_outside_area",
+      "description": "喫煙エリア外で煙草を吸っている",
+      "reactions": {
+        "report_success": {
+          "probability": 0.7,
+          "like_range": [10, 30],
+          "retweet_probability": 0.5,
+          "backlash_probability": 0.2,
+          "messages": [
+            "路上喫煙は迷惑です！",
+            "ルールを守らない人発見",
+            "喫煙所で吸ってください"
+          ]
+        },
+        "excessive_justice": {
+          "probability": 0.3,
+          "like_range": [-10, 5],
+          "backlash_probability": 0.6,
+          "messages": [
+            "そこまでしなくても...",
+            "正義マン乙",
+            "もっと大事なことあるだろ"
+          ]
+        }
+      }
+    },
+    {
+      "id": "stroller_mother",
+      "displayName": "ベビーカーの母親",
+      "violationType": "blocking_sidewalk",
+      "description": "歩道を広がって歩いている",
+      "reactions": {
+        "report_failure": {
+          "probability": 0.8,
+          "like_range": [-20, -5],
+          "backlash_probability": 0.9,
+          "suspension_risk": 0.3,
+          "messages": [
+            "子連れの母親を攻撃するな",
+            "最低だな",
+            "子育ての大変さを理解しろ"
+          ]
+        },
+        "sympathy": {
+          "probability": 0.2,
+          "like_range": [0, 10],
+          "messages": [
+            "確かに邪魔だけど仕方ない",
+            "難しい問題だね"
+          ]
+        }
+      }
+    },
+    {
+      "id": "pigeon_feeder",
+      "displayName": "鳩に餌やりおばあちゃん",
+      "violationType": "feeding_pigeons",
+      "description": "公園で鳩に餌をまいている",
+      "reactions": {
+        "report_success": {
+          "probability": 0.5,
+          "like_range": [5, 20],
+          "messages": [
+            "衛生的に問題です",
+            "糞害の原因になります"
+          ]
+        },
+        "reverse_backlash": {
+          "probability": 0.5,
+          "like_range": [-15, 0],
+          "backlash_probability": 0.7,
+          "messages": [
+            "おばあちゃんの楽しみを奪うな",
+            "優しさの何が悪い",
+            "心が狭すぎる"
+          ]
+        }
+      }
+    },
+    {
+      "id": "delivery_driver",
+      "displayName": "配達員",
+      "violationType": "temporary_parking",
+      "description": "路上に一時停車している",
+      "reactions": {
+        "report_failure": {
+          "probability": 0.9,
+          "like_range": [-30, -10],
+          "backlash_probability": 0.95,
+          "messages": [
+            "仕事の邪魔するな",
+            "配達どうやってやれと？",
+            "社会の仕組みを理解しろ"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cyclist_student",
+      "displayName": "高校生",
+      "violationType": "wrong_way_cycling",
+      "description": "自転車で逆走している",
+      "reactions": {
+        "report_success": {
+          "probability": 0.6,
+          "like_range": [5, 15],
+          "messages": [
+            "交通ルールは守るべき",
+            "危険行為です"
+          ]
+        },
+        "indifference": {
+          "probability": 0.3,
+          "like_range": [0, 5],
+          "messages": [
+            "まぁよくある光景",
+            "警察の仕事では？"
+          ]
+        },
+        "light_backlash": {
+          "probability": 0.1,
+          "like_range": [-5, 0],
+          "messages": [
+            "細かいなぁ"
+          ]
+        }
+      }
+    }
+  ],
+  "global_settings": {
+    "base_follower_gain": 10,
+    "flame_gauge_threshold": 80,
+    "suspension_threshold": 100,
+    "combo_multiplier": 1.5,
+    "time_limit_seconds": 180
+  }
+}

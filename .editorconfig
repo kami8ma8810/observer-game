@@ -1,0 +1,44 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# All files
+[*]
+charset = utf-8
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+# Code files
+[*.{cs,csx,vb,vbx}]
+indent_size = 4
+
+# JSON files
+[*.json]
+indent_size = 2
+
+# XML files
+[*.{xml,config,props,targets,nuspec,resx,ruleset,vsixmanifest,vsct}]
+indent_size = 2
+
+# YAML files
+[*.{yml,yaml}]
+indent_size = 2
+
+# Markdown files
+[*.md]
+trim_trailing_whitespace = false
+
+# Shell scripts
+[*.sh]
+end_of_line = lf
+
+# Batch files
+[*.{cmd,bat}]
+end_of_line = crlf
+
+# Unity files
+[*.{unity,prefab,mat,anim,controller,overrideController,asset,meta}]
+indent_size = 2
